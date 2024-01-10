@@ -39,7 +39,8 @@ pipeline {
             //TODO("Lab 4 - Artifact Management"): clean local docker app image
         }
         stage('Database docker build') {
-            steps {post {
+            steps { 
+                post {
                 always {
                     echo "Clean local $DB_IMAGE_NAME image"
                     script {
